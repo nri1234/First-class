@@ -7,7 +7,6 @@
         "test": "npm-run-all test:*",
         "test:html": "globstar nu-html-checker *.html",
         "init-project": "npm install && npm-run-all init:*",
-        "init:mustache": "curl https://raw.githubusercontent.com/janl/mustache.js/master/mustache.js -o vendor/mustache.js",
         "init:dirs": "mkdirp sass css vendor images js",
         "init:files": "touch README.md index.html sass/style.scss js/script.js",
         "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
