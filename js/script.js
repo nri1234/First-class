@@ -9,10 +9,15 @@ function Phone(brand, price, color, picture) {
 };
 
 Phone.prototype.printInfo = function () {
-    console.log("Brand: " + this.brand + "<br>" + "Color: " + this.color + "<br>" + "Price: " + this.price + ".");
-    phone.innerHTML = phone.innerHTML + "Brand: " + this.brand + "<br>" + "Color: " + this.color + "<br>" + "Price: " + this.price + " <br><br>";
+    console.log("Brand: " + this.brand + "<br>" + "Color: " + this.color + "<br>" + "Price: " + this.price + "<br>" + "Extended warranty: " + this.getWarrantyCost() + "<br>" + "Total price: " + this.TotalCost() + ".");
+    phone.innerHTML = phone.innerHTML + "Brand: " + this.brand + "<br>" + "Color: " + this.color + "<br>" + "Price: " + this.price + "<br>" + "Extended warranty: " + this.getWarrantyCost() + "<br>" + "Total price: " + this.TotalCost() + " <br><br>";
 };
-
+Phone.prototype.getWarrantyCost = function () {
+    return this.price * 0.1;
+};
+Phone.prototype.TotalCost = function () {
+    return this.price * 0.1 + this.price;
+};
 Phone.prototype.printSystemInfo = function () {
     if (this.brand === 'Aple') {
         console.log("The phone works on iOS operating system");
